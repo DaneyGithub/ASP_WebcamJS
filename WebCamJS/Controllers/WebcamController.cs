@@ -14,7 +14,7 @@ namespace WebCamJS.Controllers
             return View();
         }
 
-        public ActionResult StopWebcam()
+        public ActionResult ReloadWebcam()
         {
             return View("Index");
         }

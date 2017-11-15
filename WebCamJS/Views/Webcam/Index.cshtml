@@ -21,19 +21,27 @@
 </div>
 
 <div class="row">
-    <div class="col-md-3">
+   
+    <div class="col-md-2">
          <button id="webcam">Start Webcam</button>
     </div>
     
-    @*StopWebcam only reload page instead of stopping the webcam programatically*@
-
-    <div class="col-md-3">
-         @using (Html.BeginForm("StopWebcam", "Webcam"))
-         {
-             <input id="buttonWebcam" type="submit" name="webcame" value="Stop Webcam" />
-         }
+    <div class="col-md-2">
+        <button id="stop">Stop Webcam</button>
     </div>
-    <div class="col-md-3">
+
+    
+    <div class="col-md-2">
           <button id="capture">Capture Photo</button>       
     </div>
+
+    @*Reloads the webcam page*@
+
+    <div class="col-md-6">
+        @using (Html.BeginForm("ReloadWebcam", "Webcam"))
+        {
+            <input id="buttonWebcam" type="submit" name="reload" value="Reload" />
+        }
+    </div>
+
 </div>
